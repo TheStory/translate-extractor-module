@@ -1,0 +1,18 @@
+<?php
+/**
+ * Copyright: STORY DESIGN Sp. z o.o.
+ * Author: Yaroslav Shatkevich
+ * Date: 19.11.2015
+ * Time: 11:06
+ */
+
+return [
+    'translate_extractor' => [
+        'translations_path' => 'data/languages',
+        'exclude_paths' => [],
+        'poeditor' => [
+            'token' => '',
+            'project_id' => '',
+        ],
+    ],
+];
