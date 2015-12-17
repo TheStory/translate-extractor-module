@@ -61,7 +61,11 @@ class IndexController extends AbstractActionController
     public function extractAction()
     {
         $this->consoleLog('Scanning module directory for translatable files... ', false);
-        $this->readDir('module');
+
+        foreach($this->configuration['paths'] as $path) {
+            $this->readDir($path);
+        }
+
         $this->consoleLog(count($this->collectedPaths) . ' files found');
 
         $this->consoleLog('Processing files... ', false);
@@ -126,7 +130,7 @@ class IndexController extends AbstractActionController
 
     private function readDir($path)
     {
-        if (in_array($path, $this->configuration['exclude_paths'])) {
+        if (in_array($path, str_replace('/', DIRECTORY_SEPARATOR, $this->configuration['exclude_paths']))) {
             return;
         }
 

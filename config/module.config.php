@@ -44,7 +44,6 @@ return [
 
     'translate_extractor' => [
         'translations_path' => 'data/languages',
-        'exclude_paths' => [],
         'poeditor' => [
             'token' => '',
             'project_id' => '',
