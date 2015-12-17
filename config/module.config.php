@@ -44,6 +44,10 @@ return [
 
     'translate_extractor' => [
         'translations_path' => 'data/languages',
+        'exclude_paths' => [],
+        'paths' => [
+            'module',
+        ],
         'poeditor' => [
             'token' => '',
             'project_id' => '',
